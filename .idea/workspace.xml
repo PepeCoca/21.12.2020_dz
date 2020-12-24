@@ -19,7 +19,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PNP.ru" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -34,7 +34,11 @@
       <workItem from="1608559499400" duration="9499000" />
       <workItem from="1608626581073" duration="1333000" />
       <workItem from="1608628440011" duration="10810000" />
-      <workItem from="1608645697339" duration="576000" />
+      <workItem from="1608645697339" duration="897000" />
+      <workItem from="1608658825538" duration="333000" />
+      <workItem from="1608661735759" duration="192000" />
+      <workItem from="1608732077243" duration="10204000" />
+      <workItem from="1608781302896" duration="7009000" />
     </task>
     <servers />
   </component>

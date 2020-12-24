@@ -1,43 +1,54 @@
-<?php
-$time = date('H');
-if($time<7)
+<?
+
+//Задание 1
+for($i=1;$i<10;$i++)
 {
-    $img = '01.jpg';
+    $ar[]=rand(1,10);
+
+    if(($ar[$i] % 2) == 0)
+    {
+        echo "<b>$ar[$i]</b><br/>";
+    }
+    else
+        {
+        echo "<span>$ar[$i]</span><br/>";
+    }
+    $ar[$i] ++ ;
 }
-elseif($time<7 && $time>=11 )
+echo'<br>';
+
+//Задание 2
+$arr11 = array( array("розы", "апельсин" , "Ананас"),
+    array("тюльпаны", "арбуз" , "ром"),
+    array("орхидеи", "гречка" )
+);
+foreach ($arr11 as $a)
 {
-    $img = '02.jpg';
+    foreach ($a as $s)
+    {
+        mb_substr($s, 0, 1) != 'а' ?: print "$s<br>";
+        mb_substr($s, 0, 1) != 'А' ?: print "$s<br>";
+    }
+
 }
-elseif($time>=11 && $time<16)
-{
-    $img = '03.jpg';
-}
-elseif($time>=16 && $time<=20)
-{
-    $img = '04.jpg';
-}
+echo'<br>';
+
+//Задание 3
+$arr12 = array(
+    'Однозначные'=>array(5, 6 ),
+    'Двухзначные'=>array(50, 60 , 70),
+    'Трёхзначные'=>array(500,600, 700 ,800,400)
+);
+echo count($arr12['Однозначные']).'<br>';
+echo count($arr12['Двухзначные']).'<br>';
+echo count($arr12['Трёхзначные']).'<br>';
+echo count($arr12, COUNT_RECURSIVE).'<br>';
 
 
 
-?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<div> <?php
-echo $time;
-echo '<img src="'. $img .'">'; ?>
-</div>
 
 
-</body>
-</html>
+
+
 
 
