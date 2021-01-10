@@ -1,51 +1,63 @@
-<?
 
+<?php
 //Задание 1
-$str = 'Takes stake a back';
-$len = strlen($str);
-if ($len > 5) {
-    echo substr($str, 0, 5) . '...';
-} else {
-    echo $str;
-
+function randarr( $N, $min = 0, $max = 100) {
+    return array_map(
+        function() use( $min, $max) {
+            return rand( $min, $max);
+        },
+        array_pad( [], $N, 0)
+    );
 }
-echo'<br>';
+print_r( randarr(5, 0, 1000));
+echo '<br>';
+//Задание2
+function slovo ($str) {
+    $str = preg_replace('/\s+/', ' ', trim($str));
+    $words = explode(" ", $str);
+    return count($words);
+}
 
-//Задание 2
-$str = 'abc';
-echo str_replace(['a', 'b', 'c'], [1, 2, 3], 'abc');
+$str = "HTML, CSS, PHP, BITRIX";
+echo "В вашей строке количество слов =",slovo($str).'<br>';;
 
-echo'<br>';
 
 //Задание 3
-$str = 'abc abc abc';
-echo strrpos($str, 'c');
-echo '<br>';
+function mb_strrev($string)
+{
+    $strrev = "";
+    for($i = mb_strlen($string, "UTF-8"); $i >= 0; $i--) {
+        $strrev .= mb_substr($string, $i, 1, "UTF-8");
+    }
+    return $strrev;
+}
+
+echo mb_strrev("HTML, CSS, PHP, BITRIX").'<br>';
 
 //Задание 4
-$str = 'html css php';
-$arr = explode(' ', $str);
-foreach ($arr as $i){
-    echo $i .'<br>';
+function fart ($n){
 }
+$n = "HTML,CSS,PHP,BITRIX";
+$count = strlen($n);
 
+if ($count > 19) {
+    echo "В вашей строке больше 19 символов.";
+}
+elseif ($count == 19) {
+    echo "В вашей строке ровно 19 символов.";
+}
+else {
+    echo "В вашей строке меньше 19 символов.";
+}
+echo'<br>';
 //Задание 5
-$date1 = date_create("20-01-2020");
-$date2 = date_create("20-02-2021");
-$arr1 = date_diff($date1,$date2);
-echo "Количество дней : ". $arr1->days.'<br>';
-
-//Задание 5.1
-$str ='pink.png';
-if (substr($str, -4,4) == '.png') {
-    echo 'да';
-} else {
-    echo 'нет';
+function mb_str ($string){
 }
-
-
-
-
+$string = "HTML, CSS, PHP, BITRIX";
+$str = iconv('UTF-8', 'windows-1251', $string);
+foreach (str_split($str) as $index => $value) {
+    echo iconv('windows-1251','UTF-8', $value)." <br>\n";
+}
 
 
 
